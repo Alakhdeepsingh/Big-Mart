@@ -19,7 +19,7 @@ const mongoose = require("mongoose");
             required:[true,"Please Enter product Description"], 
         }, 
         price:{
-            type:String, 
+            type:Number, 
             required:[true,"Please Enter product Name"], 
             maxLength: [8, "Price cannot exceed 8 characters"],
         }, 
@@ -28,17 +28,18 @@ const mongoose = require("mongoose");
             default:0,
         }, 
         images:[
-        {
-            public_id:{
-                type:String, 
-                required:true,
-            },
-            url:{
-                type:String, 
-                required:true,
+            {
+                public_id:{
+                    type:String, 
+                    required:true
+                },
+                url:{
+                    type:String, 
+                    required:true,
             }
         }
     ],
+    
     category:{
         type:String, 
         required:[true,"Please Enter product Category"],
@@ -65,11 +66,7 @@ const mongoose = require("mongoose");
             },
         },
     ],
-    user: {
-        type: mongoose.Schema.ObjectId,
-        ref: "User",
-        required: true,
-      },
+  
       createdAt: {
           //when it is created?
         type: Date,
