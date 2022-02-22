@@ -12,7 +12,7 @@ exports.createProduct=catchAsyncErrors(async(req,res,next)=>{
 
     res.status(201).json({
         success:true,
-        product,
+        products,
     });
 });
 
@@ -20,11 +20,19 @@ exports.createProduct=catchAsyncErrors(async(req,res,next)=>{
 
 //Get all products
 exports.getAllProducts = catchAsyncErrors(async(req,res,next)=>{
-    const apiFeatures= new apiFeatures(Product.find(),req.query)
+    
+    const resultPerPage = 5;
+    //ekk page mai kitne product dikane hai 
+    const productCount = await Product.countDocuments();
+
+    const apiFeatures= new ApiFeatures(Product.find(),req.query)
+    .search()
+    .filter()
+    .pagination(resultPerPage);
     //used for search keyword , query
 
 
-    const products=await Product.find(); 
+    const products=await apiFeatures.query;
   
     //Product.find();  is like query that we are sending at query of apifeatures.js
     res.status(200).json({success:true,
@@ -47,7 +55,8 @@ if(!product){
 }
 res.status(200).json({
     success:true,
-    product
+    product,
+    productCount
 });
 });
 

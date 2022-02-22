@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 // objects are known as document or schema
 //group of document is known as collection
 
-    const productSchema = mongoose.Schema({
+    const productSchema = new mongoose.Schema({
         name:{
             type:String, 
             required:[true,"Please Enter product Name"], 
