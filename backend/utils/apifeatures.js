@@ -37,24 +37,23 @@ search() {
     queryStr = queryStr.replace(/\b(gt|gte|lt|lte)\b/g, (key) => `$${key}`);
 
     this.query = this.query.find(JSON.parse(queryStr));
-//this.query means product.find
+//this.query means product.find mtb ki jho ki link hai naa /product/ iske badh jho bhi hogha usme se quesryStr hogha
     // console.log(queryStr);
 return this;
   }
 
 
-  //
+  //pagination
   pagination(resultPerPage) {
-    const currentPage = Number(this.queryStr.page) || 1;
+    const currentPage = Number(this.queryStr.page) || 1; //1 isliye likha hai ki agar koi page parr nhi hoo tho current page rahega 1
 
-    const skip = resultPerPage * (currentPage - 1);
+    const skip = resultPerPage * (currentPage - 1); //50 products , 5 products per page    if we are on first page then resultperpage * (1-1)=0 so we will not skip and when we will be in 2nd page than 2-1=1 so we will skip 1 page
 
     this.query = this.query.limit(resultPerPage).skip(skip);
 
     return this;
   }
 }
-
 
 
 module.exports = ApiFeatures;
