@@ -66,7 +66,13 @@ const mongoose = require("mongoose");
             },
         },
     ],
-  
+    user:{
+        //let say if two people are creating this site then me and my partner should not get confusion of finding us that who has created this site
+        type:mongoose.Schema.ObjectId,
+        //product ke aage user ki id lagga rahe hai takki hamm dono identify kar sakee apne aap ko
+        ref:"User",
+        required: true,
+    },
       createdAt: {
           //when it is created?
         type: Date,

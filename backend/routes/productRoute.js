@@ -1,13 +1,19 @@
 const express = require("express");
 const { getAllProducts,createProduct,updateProduct,deleteProduct,getProductDetails } = require("../controllers/productController");
 const router=express.Router();
-
-router.route("/products").get(getAllProducts);
-router.route("/product/new").post(createProduct);
+const {isAuthenticatedUser,authorizeRoles} = require("../middleware/auth")
+router.route("/products").get( getAllProducts);
+router.route("/product/new")
+.post(isAuthenticatedUser,authorizeRoles("admin"),createProduct);
 //getting all the things from getAllProducts over here and using get request on it
-router.route("/product/:id").put(updateProduct).delete(deleteProduct).get(getProductDetails)
+router
+.route("/product/:id")
+.put(isAuthenticatedUser,authorizeRoles("admin"),updateProduct)
+.delete(isAuthenticatedUser,authorizeRoles("admin"),deleteProduct)
+.get(isAuthenticatedUser,getProductDetails)
+
 //url will be same that is why update and delete are together written
-module.exports=router
+module.exports=router;
 
 //create  read  update  delete  
 // post   get    put    delete

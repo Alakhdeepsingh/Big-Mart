@@ -6,6 +6,8 @@ const ApiFeatures=require("../utils/apifeatures");
 //create  product -- admin route
 exports.createProduct=catchAsyncErrors(async(req,res,next)=>{
    
+    req.body.user=req.user.id
+
     const products=await Product.create(req.body);
     //product create ki wajah se hii mondoDB compass mai khudh bann raha hai object 
     // console.log(req.body);
