@@ -1,22 +1,23 @@
-import React, { Fragment } from "react";
+import React, { Fragment,useEffect } from "react";
 import { CgMouse } from "react-icons/all";
 import "./Home.css";
 
 import MetaData from "../layout/MetaData";
-// import { clearErrors, getProduct } from "../../actions/productAction";
-// import { useSelector, useDispatch } from "react-redux";
+import { clearErrors, getProduct } from "../../actions/productAction.js";
+import { useSelector, useDispatch } from "react-redux";
 // import Loader from "../layout/Loader/Loader";
 // import { useAlert } from "react-alert";
 import Product from "./Product.js";
 
-const product={
-    name:"Blue Tshirt",
-    images:[{url:"https://i.ibb.co/DRST11n/1.webp"}],
-    price:"₹1500",
-    _id:"alakhdeep"
-};
+
 
 const Home = () => {
+    const dispatch = useDispatch();
+    const {loading,error,products,productsCount} = useSelector(state=>state.product)
+    //user selector se jho bhi product store ke state ke andar hotta hai vo le sakte hai
+    useEffect(()=>{
+        dispatch(getProduct());
+    }, [dispatch]);
 return(
     <Fragment>
         <MetaData title="BigMart"/>
@@ -34,15 +35,10 @@ return(
           <h2 className="homeHeading">Featured Products</h2>
 
           <div className="container" id="container">
-                <Product product={product}/>
-                <Product product={product}/>
-                <Product product={product}/>
-                <Product product={product}/>
-
-                <Product product={product}/>
-                <Product product={product}/>
-                <Product product={product}/>
-                <Product product={product}/>
+          {products &&
+              products.map((product) => (
+                <Product product ={products} />
+              ))}
           </div>
         </Fragment>
       
