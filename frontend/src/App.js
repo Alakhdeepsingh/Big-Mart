@@ -5,6 +5,7 @@ import WebFont from "webfontloader";
 import React from "react";
 import Footer from "./component/layout/Footer/Footer.js";
 import Home from "./component/Home/Home.js";
+
 // import ProductDetails from "./component/Product/ProductDetails";
 // import Products from "./component/Product/Products";
 // import Search from "./component/Product/Search";
@@ -54,6 +55,7 @@ function App() {
     <Router>
    <Header />
 <Route extact path="/" component= {Home} />
+
     <Footer/>
    </Router>
   );
