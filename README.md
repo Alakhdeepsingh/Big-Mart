@@ -1,6 +1,29 @@
 # Big-Mart
 Big-Mart is a secure, E-commerce Full Stack MERN Web Application developed primarily to facilitate buying and selling of products between users.
 
+## Features:
+
+◼Login/Signup User Account
+◼Update Profile/Password User Account
+◼Reset Password Mail using 
+◼Cart Add/Remove Items | Update Quantities
+◼Save For Later Add/Remove Items
+◼Wishlist Add/Remove Items
+◼Products Pagination (Default 8 Products Per Page)
+◼Product Search
+◼Product Filters Based on Category/Ratings | Price Range
+◼Shipping Info in Session Storage
+◼My Orders (With All Filters)
+◼Order Details of All Ordered Item
+◼Users will receive mail when an order is placed with all details
+◼Review Products User Account
+◼Admin: Dashboard access to only admin roles
+◼Admin: Update Order Status | Delete Order
+◼Admin: Add/Update Products
+◼Admin: Update User Data | Delete User
+◼Admin: List Review of Product | Delete Review
+◼Stock Management: Decrease stock of product when shipped
+
 
 ## Install Dependencies
 
