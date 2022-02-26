@@ -161,6 +161,7 @@ import {
         return {
           loading: true,
           ...state,
+          // A state in Redux is a JavaScript object, where the internal state of the application is stored as its properties
         };
       case PRODUCT_DETAILS_SUCCESS:
         return {

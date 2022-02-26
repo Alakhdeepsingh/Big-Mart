@@ -6,9 +6,9 @@ import React from "react";
 import Footer from "./component/layout/Footer/Footer.js";
 import Home from "./component/Home/Home.js";
 
-import ProductDetails from "./component/Product/ProductDetails";
-// import Products from "./component/Product/Products";
-// import Search from "./component/Product/Search";
+import ProductDetails from "./component/Product/ProductDetails.js";
+import Products from "./component/Product/Products.js";
+import Search from "./component/Product/Search.js";
 // import LoginSignUp from "./component/User/LoginSignUp";
 // import store from "./store";
 // import { loadUser } from "./actions/userAction";
@@ -54,9 +54,13 @@ function App() {
     
     <Router>
    <Header />
+   {/* What is Route exact? */}
+{/* The exact param disables the partial matching for a route and makes sure that it only returns the route if the path is an EXACT match to the current url.07 */}
 <Route extact path="/" component= {Home} />
 <Route extact path="/product/:id" component= {ProductDetails} />
-
+<Route extact path="/products" component= {Products} />
+<Route extact path="/products/:keyword" component= {Products} />
+<Route extact path="/search" component= {Products} />
     <Footer/>
    </Router>
   );

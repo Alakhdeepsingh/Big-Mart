@@ -6,7 +6,7 @@ import { clearErrors, getProduct } from "../../actions/productAction.js";
 import { useSelector, useDispatch } from "react-redux";
 import Loader from "../layout/Loader/Loader.js";
 import { useAlert } from "react-alert";
-import Product from "./Product.js";
+import Product from "./ProductCard.js";
  
 
 
