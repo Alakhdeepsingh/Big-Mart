@@ -23,9 +23,11 @@ exports.createProduct=catchAsyncErrors(async(req,res,next)=>{
 //Get all products
 exports.getAllProducts = catchAsyncErrors(async(req,res,next)=>{
     
-    const resultPerPage = 5;
+
+  //return next(new ErrorHander("This is my temp error",500));
+    const resultPerPage = 8;
     //ekk page mai kitne product dikane hai 
-    const productCount = await Product.countDocuments();
+    const productsCount = await Product.countDocuments();
 
     const apiFeatures= new ApiFeatures(Product.find(),req.query)
     .search()
@@ -38,7 +40,9 @@ exports.getAllProducts = catchAsyncErrors(async(req,res,next)=>{
   
     //Product.find();  is like query that we are sending at query of apifeatures.js
     res.status(200).json({success:true,
-        products
+        products,
+        productsCount,
+        resultPerPage,
     })
 });
 // json() Function. The res. json() function sends a JSON response. This method sends a response (with the correct content-type) 
@@ -58,7 +62,7 @@ if(!product){
 res.status(200).json({
     success:true,
     product,
-    productCount,
+
 });
 });
 
@@ -200,7 +204,7 @@ exports.createProductReview = catchAsyncErrors(async (req, res, next) => {
         reviews,
         ratings,
         numOfReviews,
-      },
+      }, 
       {
         new: true,
         runValidators: true,
