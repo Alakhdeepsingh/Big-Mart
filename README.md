@@ -1,6 +1,10 @@
 # Big-Mart
-Big-Mart is a secure, E-commerce Full Stack MERN Web Application developed primarily to facilitate buying and selling of products between users.
-Integrated Stripe payment gateway for accepting payments in test mode.
+•Big-Mart is a secure, E-commerce developed primarily to facilitate buying and selling of products between users to manage products, categories and
+users . Deployed on Heroku.
+• Integrated Stripe payments gateway for accepting payments in demo mode.
+• While user can order items, review & comment on products, sell items
+• While admin can manage posts, users, categories, comments.
+• Tested the APIs using Postman .
 
 ## Features:
 
@@ -23,7 +27,10 @@ Integrated Stripe payment gateway for accepting payments in test mode.
 ◼Admin: Add/Update Products                                                     
 ◼Admin: Update User Data | Delete User                            
 ◼Admin: List Review of Product | Delete Review                           
-◼Stock Management: Decrease stock of product when shipped                        
+◼Stock Management: Decrease stock of product when shipped    
+
+### Tech used : 
+React.js, Redux.js, Node.js, Express.js, Cloudinary, MongoDB
 
 ## Install Dependencies
 
