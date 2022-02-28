@@ -31,7 +31,7 @@ users . Deployed on Heroku.
 & many more
 
 ## Tech used : 
-React.js, Redux.js, Node.js, Express.js, Cloudinary, MongoDB
+HTML5, CSS3, Javascript, React.js, Redux.js, Node.js, Express.js, Cloudinary, MongoDB, Deployed on Heroku
 
 ## Install Dependencies
 
