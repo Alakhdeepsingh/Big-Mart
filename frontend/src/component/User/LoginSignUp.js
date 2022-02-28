@@ -41,7 +41,7 @@ const LoginSignUp = ({ history, location }) => {
   };
 
   const registerSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
 
     const myForm = new FormData();
 
@@ -58,6 +58,7 @@ const LoginSignUp = ({ history, location }) => {
 
       reader.onload = () => {
         if (reader.readyState === 2) {
+            //0-initial , 1-processing, 2-done
           setAvatarPreview(reader.result);
           setAvatar(reader.result);
         }
@@ -75,6 +76,7 @@ const LoginSignUp = ({ history, location }) => {
     if (error) {
       alert.error(error);
       dispatch(clearErrors());
+    //   dispatch is a function of the Redux store. You call store. dispatch to dispatch an action. This is the only way to trigger a state change. With React Redux, your components never access the store directly - connect does it for you
     }
 
     if (isAuthenticated) {
@@ -93,7 +95,7 @@ const LoginSignUp = ({ history, location }) => {
     if (tab === "register") {
       switcherTab.current.classList.add("shiftToRight");
       switcherTab.current.classList.remove("shiftToNeutral");
-
+     
       registerTab.current.classList.add("shiftToNeutralForm");
       loginTab.current.classList.add("shiftToLeft");
     }
