@@ -1,10 +1,10 @@
 # Big-Mart
 •Big-Mart is a secure, E-commerce developed primarily to facilitate buying and selling of products between users to manage products, categories and
-users . Deployed on Heroku.
-• Integrated Stripe payments gateway for accepting payments in demo mode.
-• While user can order items, review & comment on products, sell items
-• While admin can manage posts, users, categories, comments.
-• Tested the APIs using Postman .
+users . Deployed on Heroku.                       
+• Integrated Stripe payments gateway for accepting payments in demo mode.                               
+• While user can order items, review & comment on products, sell items.                       
+• While admin can manage posts, users, categories, comments.                       
+• Tested the APIs using Postman .                 
 
 ## Features:
 
