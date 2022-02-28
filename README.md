@@ -29,7 +29,7 @@ users . Deployed on Heroku.
 ◼Admin: List Review of Product | Delete Review                           
 ◼Stock Management: Decrease stock of product when shipped    
 
-### Tech used : 
+## Tech used : 
 React.js, Redux.js, Node.js, Express.js, Cloudinary, MongoDB
 
 ## Install Dependencies
