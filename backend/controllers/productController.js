@@ -32,17 +32,23 @@ exports.getAllProducts = catchAsyncErrors(async(req,res,next)=>{
     const apiFeatures= new ApiFeatures(Product.find(),req.query)
     .search()
     .filter()
-    .pagination(resultPerPage);
+    
+    let products = await apiFeature.query;
+
+    let filteredProductsCount = products.lenght;
+
+    apiFeatures.pagination(resultPerPage);
     //used for search keyword , query
 
 
-    const products=await apiFeatures.query;
+    products=await apiFeature.query;
   
     //Product.find();  is like query that we are sending at query of apifeatures.js
     res.status(200).json({success:true,
         products,
         productsCount,
         resultPerPage,
+        filteredProductsCount,
     })
 });
 // json() Function. The res. json() function sends a JSON response. This method sends a response (with the correct content-type) 

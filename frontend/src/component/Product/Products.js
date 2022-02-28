@@ -75,15 +75,17 @@ const Products = ({ match }) => {
               products.map((product) => (
                 <ProductCard key={product._id} product={product} />
               ))}
-          </div>
+          </div> 
 
           <div className="filterBox">
             <Typography>Price</Typography>
+            {/* Typography is basically a paragraph tag but in this some css property is applied as inbuilt */}
             <Slider
               value={price}
               onChange={priceHandler}
               valueLabelDisplay="auto"
               aria-labelledby="range-slider"
+              // range-slider is a type of slider
               min={0}
               max={25000}
             />
@@ -115,7 +117,7 @@ const Products = ({ match }) => {
               />
             </fieldset>
           </div>
-          {resultPerPage < productsCount && (
+          {resultPerPage < count && (
             <div className="paginationBox">
               <Pagination
                 activePage={currentPage}
