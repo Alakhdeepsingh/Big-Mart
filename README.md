@@ -5,6 +5,9 @@ users . Deployed on Heroku.
 • While user can order items, review & comment on products, sell items.                       
 • While admin can manage posts, users, categories, comments.                       
 • Tested the APIs using Postman .                 
+  
+  Visit Website : 
+
 
 ## Features:
 
