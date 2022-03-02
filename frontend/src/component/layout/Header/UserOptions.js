@@ -49,7 +49,9 @@ const UserOptions = ({ user }) => {
 
   function orders() {
     history.push("/orders");
-  }
+    // history. push() is another approach where we make use of the history props React Router provides while rendering a component
+    // In other words, this works when the component is being rendered by React Router, bypassing the component as a Component prop to a Route
+    }
   function account() {
     history.push("/account");
   }
@@ -69,6 +71,7 @@ const UserOptions = ({ user }) => {
         onClose={() => setOpen(false)}
         onOpen={() => setOpen(true)}
         style={{ zIndex: "11" }}
+        // Z Index ( z-index ) is a CSS property that defines the order of overlapping HTML elements. 
         open={open}
         direction="down"
         className="speedDial"

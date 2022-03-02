@@ -98,12 +98,13 @@ const Products = ({ match }) => {
                   key={category}
                   onClick={() => setCategory(category)}
                 >
-                  {category}
+                  {category} 
                 </li>
               ))}
             </ul>
 
             <fieldset>
+            {/* The <fieldset> tag is used to group related elements in a form. */}
               <Typography component="legend">Ratings Above</Typography>
               <Slider
                 value={ratings}
