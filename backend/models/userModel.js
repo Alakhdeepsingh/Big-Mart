@@ -8,7 +8,7 @@ const crypto=require("crypto");
 //crypto is build in module , phele se hii aata hai yehh jesse ki yaad hogha fs
 const userSchema=new mongoose.Schema({
     name:{
-        type: 'string',
+        type: String,
         required: [true,"Please Enter your name"],
         maxLength:[30,"Name cannot exceed 30 characters"],
         minLenght:[4,"Name should have more than 4 characters"]

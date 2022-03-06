@@ -2,10 +2,11 @@ import React from "react";
 import "./aboutSection.css";
 import { Button, Typography, Avatar } from "@material-ui/core";
 import YouTubeIcon from "@material-ui/icons/YouTube";
-import InstagramIcon from "@material-ui/icons/Instagram";
+import GitHubIcon from "@material-ui/icons/GitHub";
+
 const About = () => {
-  const visitInstagram = () => {
-    window.location = "https://instagram.com/meabhisingh";
+  const visitLinkedIn = () => {
+    window.location = "https://www.linkedin.com/in/alakhdeepsingh/";
   };
   return (
     <div className="aboutSection">
@@ -18,29 +19,28 @@ const About = () => {
           <div>
             <Avatar
               style={{ width: "10vmax", height: "10vmax", margin: "2vmax 0" }}
-              src="https://res.cloudinary.com/tripleayt/image/upload/v1631555947/products/jpyibarlaxawvcvqjv5b.png"
+              src="https://res.cloudinary.com/bigmart/image/upload/v1646056690/avatars/pic_gdwggn.jpg"
               alt="Founder"
             />
-            <Typography>Abhishek Singh</Typography>
-            <Button onClick={visitInstagram} color="primary">
-              Visit Instagram
+            <Typography>Alakhdeep Singh</Typography>
+            <Button onClick={visitLinkedIn} color="primary">
+              Visit Linkedin
             </Button>
             <span>
-              This is a sample wesbite made by @meabhisingh. Only with the
-              purpose to teach MERN Stack on the channel 6 Pack Programmer
+              This is a BigMart wesbite made by AlakhdeepSingh.
             </span>
           </div>
           <div className="aboutSectionContainer2">
             <Typography component="h2">Our Brands</Typography>
             <a
-              href="https://www.youtube.com/channel/UCO7afj9AUo0zV69pqEYhcjw"
+              href="https://www.youtube.com/channel/UC2IKS2Izc-_jR0NrR1AVkIw"
               target="blank"
             >
-              <YouTubeIcon className="youtubeSvgIcon" />
+              <YouTubeIcon className="linkedinSvgIcon" />
             </a>
 
-            <a href="https://instagram.com/meabhisingh" target="blank">
-              <InstagramIcon className="instagramSvgIcon" />
+            <a href="https://github.com/Alakhdeepsingh" target="blank">
+              <GitHubIcon className="githubSvgIcon" />
             </a>
           </div>
         </div>
