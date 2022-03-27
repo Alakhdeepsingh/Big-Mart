@@ -49,8 +49,6 @@ exports.getAllProducts = catchAsyncErrors(async (req, res, next) => {
 
   let products = await apiFeature.query.clone;
 
-
-
   // .clone function ka kya kam hai??????????????
 
   let filteredProductsCount = products.length;

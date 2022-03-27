@@ -58,7 +58,6 @@ console.log(user);
 
 
 //logout user 
-
 exports.logout=catchAsyncErrors(async(req, res, next)=>{
 
     res.cookie("token",null,{
