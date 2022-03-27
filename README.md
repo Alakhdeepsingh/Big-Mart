@@ -34,7 +34,7 @@ users . Deployed on Heroku.
 & many more
 
 ## Tech used : 
-HTML5, CSS3, Javascript, React.js, Redux.js, Node.js, Express.js, Cloudinary, MongoDB, Deployed on Heroku
+HTML5, CSS3, Javascript, React.js, Redux.js, Node.js, Express.js, Cloudinary, MongoDB, Stripe payments gateway, Deployed on Heroku
 
 ## Install Dependencies
 
