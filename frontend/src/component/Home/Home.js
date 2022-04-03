@@ -27,10 +27,10 @@ console.log(products);
         <Loader />
       ) : (
         <Fragment>
-          <MetaData title="ECOMMERCE" />
+          <MetaData title="BIGMART" />
 
           <div className="banner">
-            <p>Welcome to Ecommerce</p>
+            <p>Welcome to BIGMART</p>
             <h1>FIND AMAZING PRODUCTS BELOW</h1>
 
             <a href="#container">
