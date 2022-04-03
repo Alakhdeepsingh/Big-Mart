@@ -9,9 +9,12 @@ const ProductCard = ({ product }) => {
     readOnly: true,
     precision: 0.5,
   };
-  return (
-    <Link className="productCard" to={`/product/${product._id}`}>
-      <img src={product.images[0].url} alt={product.name} />
+  console.log(product,"hello");
+
+
+  return product? (
+    <Link className="productCard" to={`/products/${product._id}`}>
+      <img src={product.images[0].url ??""} alt={product.name} />
       <p>{product.name}</p>
       <div>
         <Rating {...options} />{" "}
@@ -22,7 +25,7 @@ const ProductCard = ({ product }) => {
       </div>
       <span>{`₹${product.price}`}</span>
     </Link>
-  );
+  ): null
 };
 
 export default ProductCard;

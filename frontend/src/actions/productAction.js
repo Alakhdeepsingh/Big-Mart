@@ -33,29 +33,29 @@ import {
 
 // Get All Products
 export const getProduct =
-  (keyword = "", currentPage = 1, price = [0, 25000], category, ratings = 0) =>
+  (keyword = "", currentPage = 1, price = [0, 250000], category, ratings = 0) =>
   async (dispatch) => {
     try {
       dispatch({ type: ALL_PRODUCT_REQUEST });
 
-      let link = `/api/v1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&ratings[gte]=${ratings}`;
+      let link = `/api/v1/products`;
 
       if (category) {
         link = `/api/v1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&category=${category}&ratings[gte]=${ratings}`;
       }
 
       const { data } = await axios.get(link);
-      // What is Axios On React?
-// Axios is a lightweight HTTP client based on the $http service within Angular. js v1. x and is similar to the native JavaScript Fetch API
-
+      console.log(data+"world");
       dispatch({
         type: ALL_PRODUCT_SUCCESS,
         payload: data,
       });
-    } catch (error) {
+    } 
+    catch (error) {
+      console.log(error);
       dispatch({
         type: ALL_PRODUCT_FAIL,
-        payload: error.response.data.message
+        payload: error.response.data.message,
       });
     }
   };
@@ -157,9 +157,7 @@ export const getProductDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST });
 
-    const data  = await axios.get(`/api/v1/product/${id}`);
-    console.log(data);
-    console.log(id);
+    const  data = await axios.get(`/api/v1/product/${id}`);
 
     dispatch({
       type: PRODUCT_DETAILS_SUCCESS,
