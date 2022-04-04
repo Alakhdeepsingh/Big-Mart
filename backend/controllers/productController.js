@@ -49,8 +49,6 @@ exports.getAllProducts = catchAsyncErrors(async (req, res, next) => {
 
   let products = await apiFeature.query;
 
-  // .clone function ka kya kam hai??????????????
-
   let filteredProductsCount = products.length;
 
   apiFeature.pagination(resultPerPage);
@@ -207,7 +205,6 @@ exports.createProductReview = catchAsyncErrors(async (req, res, next) => {
 });
 
 // Get All Reviews of a product
-
 exports.getProductReviews = catchAsyncErrors(async (req, res, next) => {
   const product = await Product.findById(req.query.id);
 
