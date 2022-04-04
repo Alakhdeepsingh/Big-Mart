@@ -43,11 +43,11 @@ exports.getAllProducts = catchAsyncErrors(async (req, res, next) => {
   const resultPerPage = 8;
   const productsCount = await Product.countDocuments();
 
-  const apiFeature = new ApiFeatures(Product.find({}), req.query)
+  const apiFeature = new ApiFeatures(Product.find(), req.query)
     .search()
     .filter();
 
-  let products = await apiFeature.query.clone;
+  let products = await apiFeature.query;
 
   // .clone function ka kya kam hai??????????????
 
@@ -207,6 +207,7 @@ exports.createProductReview = catchAsyncErrors(async (req, res, next) => {
 });
 
 // Get All Reviews of a product
+
 exports.getProductReviews = catchAsyncErrors(async (req, res, next) => {
   const product = await Product.findById(req.query.id);
 

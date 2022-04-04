@@ -24,7 +24,7 @@ const Footer = () => {
         <h4>Follow Us</h4>
         <a href="https://www.linkedin.com/in/alakhdeepsingh/">Linkedin</a>
         <a href="https://www.youtube.com/channel/UC2IKS2Izc-_jR0NrR1AVkIw">Youtube</a>
-        <a href="https://github.com/Alakhdeepsingh">Github</a>
+        <a href="https://github.com/Alakhdeepsingh/Big-Mart">Github</a>
       </div>
     </footer>
   );

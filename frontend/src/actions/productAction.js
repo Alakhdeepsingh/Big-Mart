@@ -45,8 +45,6 @@ export const getProduct =
       }
 
       const { data } = await axios.get(link);
-      // What is Axios On React?
-// Axios is a lightweight HTTP client based on the $http service within Angular. js v1. x and is similar to the native JavaScript Fetch API
 
       dispatch({
         type: ALL_PRODUCT_SUCCESS,
@@ -55,7 +53,7 @@ export const getProduct =
     } catch (error) {
       dispatch({
         type: ALL_PRODUCT_FAIL,
-        payload: error.response.data.message
+        payload: error.response.data.message,
       });
     }
   };
@@ -157,9 +155,7 @@ export const getProductDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST });
 
-    const data  = await axios.get(`/api/v1/product/${id}`);
-    console.log(data);
-    console.log(id);
+    const { data } = await axios.get(`/api/v1/product/${id}`);
 
     dispatch({
       type: PRODUCT_DETAILS_SUCCESS,

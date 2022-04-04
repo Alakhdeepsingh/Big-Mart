@@ -20,17 +20,17 @@ const Home = () => {
     }
     dispatch(getProduct());
   }, [dispatch, error, alert]);
-
+console.log(products);
   return (
     <Fragment>
       {loading ? (
         <Loader />
       ) : (
         <Fragment>
-          <MetaData title="ECOMMERCE" />
+          <MetaData title="BIGMART" />
 
           <div className="banner">
-            <p>Welcome to BigMart</p>
+            <p>Welcome to BIGMART</p>
             <h1>FIND AMAZING PRODUCTS BELOW</h1>
 
             <a href="#container">
