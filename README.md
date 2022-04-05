@@ -16,14 +16,13 @@ users . Deployed on Heroku.
 ◼Reset Password Mail using                           
 ◼Cart Add/Remove Items | Update Quantities             
 ◼Save For Later Add/Remove Items                        
-◼Wishlist Add/Remove Items                          
+◼Wishlist Add Items                          
 ◼Products Pagination (Default 8 Products Per Page)                    
 ◼Product Search                                                          
 ◼Product Filters Based on Category/Ratings | Price Range                           
 ◼Shipping Info in Session Storage              
 ◼My Orders (With All Filters)              
-◼Order Details of All Ordered Item                 
-◼Users will receive mail when an order is placed with all details              
+◼Order Details of All Ordered Item                          
 ◼Review Products User Account                        
 ◼Admin: Dashboard access to only admin roles                        
 ◼Admin: Update Order Status | Delete Order                      
