@@ -28,6 +28,8 @@ const Dashboard = () => {
       }
     });
 
+
+    
   useEffect(() => {
     dispatch(getAdminProduct());
     dispatch(getAllOrders());
