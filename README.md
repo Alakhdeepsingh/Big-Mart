@@ -1,4 +1,6 @@
 # Big-Mart
+
+## About Project :
 •Big-Mart is a secure, E-commerce developed primarily to facilitate buying and selling of products between users to manage products, categories and
 users . Deployed on Heroku.                       
 • Integrated Stripe payments gateway for accepting payments in demo mode.                               
