@@ -104,7 +104,17 @@ const ConfirmOrder = ({ history }) => {
               <span>₹{totalPrice}</span>
             </div>
 
-            <button onClick={proceedToPayment}>Proceed To Payment</button>
+                    <button> 
+                  <a 
+                      // style = {{text-decoration:"none"}}
+                  
+                  href = "https://rzp.io/l/Ea4C4GMyEQ">
+                      Proceed to Payment
+                      
+                  </a>
+
+                       </button>
+            {/* <button onClick={proceedToPayment}>Proceed To Payment</button> */}
           </div>
         </div>
       </div>
