@@ -34,8 +34,26 @@ users . Deployed on Heroku.
 ◼Stock Management: Decrease stock of product when shipped   
 & many more
 
-## Tech used : 
-HTML5, CSS3, Javascript, React.js, Redux.js, Node.js, Express.js, Cloudinary, MongoDB, Stripe payments gateway, Deployed on Heroku
+## Project Technologies
+This project utilizes various technologies to provide its functionality:
+
+### Frontend:
+▪️ HTML5
+▪️ CSS3
+▪️ JavaScript
+▪️ React.js
+▪️ Redux.js
+###  Backend:
+▪️ Node.js
+▪️ Express.js
+### Database:
+▪️ MongoDB
+### Image Hosting:
+▪️ Cloudinary
+### Payment Gateway:
+▪️ Stripe
+### Deployment:
+▪️ Heroku
 
 ## Install Dependencies
 
